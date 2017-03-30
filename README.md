@@ -3,7 +3,7 @@
 
 ## Description
 
-Made for the Udacity Frontend-Nanodegree, in this project you will see a map the museums of São Paulo, Brazil. This map is included via the Google Maps API. Functionality includes clickable markers with content from wikipedia matching to the locations and a search function for filtering the museums.
+Made for the Udacity Frontend-Nanodegree, in this project you will see a map of the museums in São Paulo, Brazil. This map is included via the Google Maps API. Functionality includes clickable markers with content from wikipedia matching to the locations and a search function for filtering the museums.
 
 ## Getting started
 
