@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #555;
+}
+
+#map {
+	height: 100%;
+}
+
+.filter {
+  background-color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 250px;
+  border: 1px solid;
+  height: 45px;
+  font-size: 1em;
+  padding-left: 1em;
+}
+
+.search-title {
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+.hamburguer-menu {
+	padding-left: 1em;
+}
+
+#location {
+	transition: all 3000ms cubic-bezier(1, 0, 0, 1) !important;
+}
+
+svg {
+  width: 30px;
+}
+
+.search-box {
+  background-color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 45px;
+  z-index: 1;
+  width: 250px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  height: 50px;
+  font-size: 1.1em;
+  padding: 10px;
+}
+
+.location-list {
+  position: absolute;
+  background-color: #fff;
+  top: 95px;
+  left: 0px;
+  z-index: 1;
+  width: 250px;
+  border: 1px solid;
+  max-height: calc(75% - 110px);
+  overflow-y: auto;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	display: block;
+	text-decoration: none;
+	line-height: 30px;
+	border-bottom: 2px solid beige;
+	padding: 0 0 5px 10px;
+	cursor: pointer;
+	background-color: lightgrey;
+	color: black;
+}
+
+li:hover {
+	background-color: beige;
+}
+
+input {
+	width: 100%;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+.infoWindow {
+	width: 100%;
+	height: 200px;
+}
+
+@media screen and (max-device-width: 700px) {
+	body {
+			font-size: 10px;
+	}
+
+	h4 {
+			font-size: 12px;
+	}
+
+	li {
+			line-height: 12px;
+			padding: 2px;
+	}
+
+	input {
+			line-height: 12px;
+	}
+
+	.infoWindow {
+			height: 100px;
+			font-size: 10px;
+	}
+}
+
