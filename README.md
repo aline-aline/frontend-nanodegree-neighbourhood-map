@@ -11,7 +11,7 @@ Made for the Udacity Frontend-Nanodegree, in this project you will see a map the
 
 OR
 
-- Go to [https://aline-aline.github.io/frontend-nanodegree-neighbourhood-map](https://aline-aline.github.io/frontend-nanodegree-neighbourhood-map)
+- Go to [https://aline-aline.github.io/frontend-nanodegree-neighbourhood-map](https://aline-aline.github.io/frontend-nanodegree-neighbourhood-map/dist)
 
 ## Used techniques
 - Knockout JS
