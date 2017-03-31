@@ -41,7 +41,7 @@ var viewModel = {
 
 			if (searchedTitle.indexOf(filter) > -1) {
 				model.locations[i].isFiltered(true);
-				model.locations[i].marker.setMap(map);
+				model.locations[i].marker.setVisible(true);
 			}
 			else {
 				model.locations[i].isFiltered(false);

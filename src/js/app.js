@@ -45,3 +45,7 @@ var initMap = function () {
 		alert("Unable to connect to Google Maps. Error: " + error);
 	}
 };
+
+function mapError() {
+	mapErrorMsg("<p>Error encountered with Google Maps API.<br>Please refresh or try again later.</p>");
+};

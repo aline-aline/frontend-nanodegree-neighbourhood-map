@@ -112,7 +112,7 @@ var model = {
 			isFiltered: ko.observable(true)
 		}
 	],
-
+	
 	// Wikipedia API
 	setContent: function () {
 		for (var i = 0; i < this.locations.length; i++) {
@@ -124,6 +124,9 @@ var model = {
 
 				function getWikiExtract(i, wikiRequestTimeout, wikiURL) {
 					var result = '';
+					var infoWindow = new google.maps.InfoWindow({
+						content: 'No data to display'
+					});
 					$.ajax({
 						url: wikiURL,
 						dataType: "jsonp"
@@ -133,7 +136,7 @@ var model = {
 					}
 					else {
 						result = "No pages were found in Wiki";
-						model.locations[i].infowindow = new google.maps.InfoWindow({
+						infowindow.setContent = new google.maps.InfoWindow({
 								content: model.locations[i].title() + "<br><br>" + "Wikipedia info:" + "<br>" + result
 						});
 					}
@@ -164,6 +167,7 @@ var model = {
 	toggleBounce: function (location) {
 		viewModel.disableMarkers();
 		location.marker.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(function() { location.marker.setAnimation(null); }, 2000);
 	},
 
 	createMarker: function (location) {
