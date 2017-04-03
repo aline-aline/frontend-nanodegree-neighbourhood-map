@@ -31,7 +31,7 @@ var viewModel = {
 		ko.applyBindings(viewModel);
 		viewModel.searchQuery.subscribe(this.filterItems);
 	},
-
+	
 	filterItems: function () {
 		var filter = viewModel.searchQuery().toLowerCase();
 
@@ -41,7 +41,7 @@ var viewModel = {
 
 			if (searchedTitle.indexOf(filter) > -1) {
 				model.locations[i].isFiltered(true);
-				model.locations[i].marker.setVisible(true);
+				model.locations[i].marker.setMap(map);
 			}
 			else {
 				model.locations[i].isFiltered(false);

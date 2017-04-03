@@ -1,4 +1,5 @@
 var map = '';
+var infoWindow; 
 
 var applyMapStyles = function () {
 	var styleArray = [
@@ -38,6 +39,7 @@ var initMap = function () {
 			center: new google.maps.LatLng(-23.519179, -46.630078),
 			mapTypeId: google.maps.MapTypeId.ROOFTOP
 		});
+		infowindow = new google.maps.InfoWindow();
 		applyMapStyles();
 		viewModel.init();
 	}
@@ -47,5 +49,6 @@ var initMap = function () {
 };
 
 function mapError() {
-	mapErrorMsg("<p>Error encountered with Google Maps API.<br>Please refresh or try again later.</p>");
+	alert('Error encountered with Google Maps API. Please refresh or try again later.');
+	console.log('Error encountered with Google Maps API. Please refresh or try again later.');
 };

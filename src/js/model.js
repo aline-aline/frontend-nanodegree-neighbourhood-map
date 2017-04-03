@@ -121,7 +121,7 @@ var model = {
 					article = "failed to get Wiki resources";
 			}, 8000);
 			var article = getWikiExtract(i, wikiRequestTimeout, wikiURL);
-
+			
 				function getWikiExtract(i, wikiRequestTimeout, wikiURL) {
 					var result = '';
 					var infoWindow = new google.maps.InfoWindow({
@@ -141,7 +141,7 @@ var model = {
 						});
 					}
 					for (var id in pages) {
-						result = pages[id].extract;
+						result = pages[id].extract || 'Dados não disponíveis';
 						model.locations[i].infowindow = new google.maps.InfoWindow({
 								content: '<div class="infoWindow"' + '<strong><b>' + model.locations[i].title() + '</b></strong>' + '<br><br>' + "Wikipedia info:" + '<br>' + result + '</div>',
 								maxWidth: '150'
@@ -167,7 +167,7 @@ var model = {
 	toggleBounce: function (location) {
 		viewModel.disableMarkers();
 		location.marker.setAnimation(google.maps.Animation.BOUNCE);
-		setTimeout(function() { location.marker.setAnimation(null); }, 2000);
+		setTimeout(function() { location.marker.setAnimation(null); }, 1400);
 	},
 
 	createMarker: function (location) {
